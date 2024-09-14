@@ -3,7 +3,7 @@
         <div class="content-news">
             <div class="row">
                 <div class="col-lg-4">
-                    <h4 class="news-title">Increva-se na nossa newsletter e fique sempre em dia com o mundo financeiro!</h4>
+                    <h4 class="news-title">Inscreva-se na nossa newsletter e fique sempre em dia com o mundo financeiro!</h4>
                 </div>
                 <div class="col-lg-8">
                     <form action="#" method="post">

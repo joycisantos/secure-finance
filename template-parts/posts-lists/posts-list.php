@@ -26,6 +26,7 @@
                             <div class="entry-content">
                                 <?php the_excerpt(); ?>
                             </div>
+                            <p class="tag-names">Tags: <?php the_tags('', ', ', ''); ?></p>
                             <a href="<?php the_permalink(); ?>" class="btn-default">Leia mais</a>
                     </div>
                 </div>

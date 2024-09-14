@@ -2,15 +2,20 @@ jQuery(document).ready(function($) {
     var page = 1;
 
     // Função para carregar posts
-    function loadPosts() {
+    function loadPosts(action, idField) {
         page++;
+        var data = {
+            action: action,
+            page: page
+        };
+        if (idField) {
+            data[idField] = ajax_params.queried_object_id; // Adiciona o ID da categoria ou tag se necessário
+        }
+
         $.ajax({
             url: ajax_params.ajax_url,
             type: 'POST',
-            data: {
-                action: 'load_more_posts',
-                page: page
-            },
+            data: data,
             success: function(response) {
                 // Verifica se a resposta é um JSON
                 try {
@@ -32,6 +37,13 @@ jQuery(document).ready(function($) {
 
     // Evento de clique no botão de carregamento
     $('.load-more-button').on('click', function() {
-        loadPosts();
+        // Verifica o tipo de página e chama a função adequada
+        if (ajax_params.is_category) {
+            loadPosts('load_more_category_posts', 'category_id');
+        } else if (ajax_params.is_tag) {
+            loadPosts('load_more_tag_posts', 'tag_id');
+        } else {
+            loadPosts('load_more_general_posts'); // Posts gerais
+        }
     });
 });

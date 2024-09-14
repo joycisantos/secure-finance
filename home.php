@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
-    <?php get_template_part('template-parts/main-banner'); ?>
+    <?php get_template_part('template-parts/banners/main-banner'); ?>
 
     <section class="recent-posts">
         <div class="container">
             <h2 class="title-h2">Últimos Posts</h2>
 
-            <?php get_template_part('template-parts/posts-list'); ?>
+            <?php get_template_part('template-parts/posts-lists/posts-list'); ?>
         </div>
     </section>
 
