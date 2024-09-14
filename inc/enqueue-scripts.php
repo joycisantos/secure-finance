@@ -22,6 +22,15 @@ function tema_enqueue_scripts()
         null,
         true
     );
+
+    // Script customizado com dependência do jQuery
+    wp_enqueue_script(
+        'menu-mobile',
+        get_template_directory_uri() . '/js/menu-mobile.js',
+        array('jquery'), // Garantir que o jQuery é carregado
+        null,
+        true
+    );
 }
 
 add_action('wp_enqueue_scripts', 'tema_enqueue_scripts');
