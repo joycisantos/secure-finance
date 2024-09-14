@@ -34,7 +34,9 @@
         <?php endwhile;
         wp_reset_postdata();
     else : ?>
-        <p>Nenhum post encontrado.</p>
+        <p class="no-result">Nenhum post encontrado.</p>
     <?php endif; ?>
 </div>
-<button class="load-more-button btn-default">Carregar mais</button>
+<?php if ($recent_posts_query->found_posts > 3) : ?>
+    <button class="load-more-button btn-default">Carregar mais</button>
+<?php endif; ?>

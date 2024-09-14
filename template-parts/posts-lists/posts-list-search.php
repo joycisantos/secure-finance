@@ -1,15 +1,18 @@
 <div class="posts-list">
     <?php
-    $current_tag = get_queried_object();
+    // Obtém o termo de pesquisa
+    $search_query = get_search_query();
 
-    $tag_posts_query = new WP_Query(array(
-        'tag_id'         => $current_tag->term_id,
+    // Configura a query para buscar posts que correspondem ao termo de pesquisa
+    $search_posts_query = new WP_Query(array(
+        's'              => $search_query, // Busca pelo termo de pesquisa
         'posts_per_page' => 3,
         'paged'          => get_query_var('paged') ? get_query_var('paged') : 1,
     ));
 
-    if ($tag_posts_query->have_posts()) :
-        while ($tag_posts_query->have_posts()) : $tag_posts_query->the_post(); ?>
+    // Verifica se há posts correspondentes ao termo de busca
+    if ($search_posts_query->have_posts()) :
+        while ($search_posts_query->have_posts()) : $search_posts_query->the_post(); ?>
             <article>
                 <div class="row">
                     <div class="col-lg-5">
@@ -37,9 +40,10 @@
         <?php endwhile;
         wp_reset_postdata();
     else : ?>
-        <p class="no-result">Nenhum post encontrado.</p>
+        <p class="no-result">Nenhum post encontrado para: "<?php echo esc_html($search_query); ?>"</p>
     <?php endif; ?>
 </div>
-<?php if ($tag_posts_query->found_posts > 3) : ?>
+
+<?php if ($search_posts_query->found_posts > 3) : ?>
     <button class="load-more-button btn-default">Carregar mais</button>
 <?php endif; ?>

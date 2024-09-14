@@ -24,6 +24,12 @@
                         </div>
                         <a href="<?php the_permalink(); ?>" class="btn-default">Leia mais</a>
                     </div>
+                    <a href="#posts">
+                        <div class="icon-scroll">
+                            <div class="first-arrow"></div>
+                            <div class="second-arrow"></div>
+                        </div>
+                    </a>
                 </div>
             </section>
 
