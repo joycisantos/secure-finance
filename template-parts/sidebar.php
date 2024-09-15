@@ -21,7 +21,7 @@
 
                 <a href="<?php echo esc_url($category_link); ?>" class="link-category">
                     <div class="category-icon">
-                        <img src="<?= esc_url($category_icon) ?>" alt="">
+                        <img src="<?= esc_url($category_icon) ?>" alt="Ícone" width="50" height="50">
                     </div>
                     <?php echo esc_html($category_name); ?>
                 </a>

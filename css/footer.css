@@ -51,12 +51,12 @@ footer .footer-menu li a:hover {
 }
 
 footer .copy {
-	color: var(--second-text-color);
+	color: #FFFFFF;
 	text-align: center;
 	font-size: 16px;
 	padding-top: 20px;
 	margin-top: 50px;
-	border-top: solid 1px var(--second-text-color);
+	border-top: solid 1px #FFFFFF;
 }
 
 .contact-info .social-links {

@@ -32,13 +32,13 @@
       <div class="menu">
         <?php if (get_theme_mod('logo_site')) : ?>
           <a href="<?= site_url() ?>">
-            <img src="<?php echo esc_url(get_theme_mod('logo_site')); ?>" alt="<?php bloginfo('name'); ?>" class="logo-menu">
+            <img src="<?php echo esc_url(get_theme_mod('logo_site')); ?>" alt="<?php bloginfo('name'); ?>" class="logo-menu" width="150" height="63">
           </a>
         <?php
         else :
         ?>
           <a href="<?= site_url() ?>">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-menu">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-menu" width="150" height="63">
           </a>
         <?php
         endif; ?>

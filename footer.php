@@ -6,13 +6,13 @@
 			<div class="col-lg-4">
 				<?php if (get_theme_mod('logo_footer')) : ?>
 					<a href="<?= site_url() ?>">
-						<img src="<?php echo esc_url(get_theme_mod('logo_footer')); ?>" alt="<?php bloginfo('name'); ?>" class="logo-footer">
+						<img src="<?php echo esc_url(get_theme_mod('logo_footer')); ?>" alt="<?php bloginfo('name'); ?>" class="logo-footer" width="150" height="63">
 					</a>
 				<?php
 				else :
 				?>
 					<a href="<?= site_url() ?>">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-footer.png" alt="<?php bloginfo('name'); ?>" class="logo-footer">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-footer.png" alt="<?php bloginfo('name'); ?>" class="logo-footer" width="150" height="63">
 					</a>
 				<?php
 				endif;
