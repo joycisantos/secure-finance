@@ -4,7 +4,7 @@
 
 <section class="recent-posts" id="posts">
     <div class="container">
-        <h2 class="title-h2">Últimos Posts</h2>
+        <h2 class="title-h2 animate__animated animate__fadeInUp">Últimos Posts</h2>
 
         <?php get_template_part('template-parts/posts-lists/posts-list'); ?>
     </div>

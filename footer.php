@@ -8,7 +8,15 @@
 					<a href="<?= site_url() ?>">
 						<img src="<?php echo esc_url(get_theme_mod('logo_footer')); ?>" alt="<?php bloginfo('name'); ?>" class="logo-footer">
 					</a>
-				<?php endif; ?>
+				<?php
+				else :
+				?>
+					<a href="<?= site_url() ?>">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>img/logo-footer.png" alt="<?php bloginfo('name'); ?>" class="logo-footer">
+					</a>
+				<?php
+				endif;
+				?>
 			</div>
 			<div class="col-lg-4">
 				<?php
@@ -33,7 +41,7 @@
 	</div>
 	<div class="copy">
 		<div class="container">
-			©<?= date('Y')?>. Todos os direitos reservados.
+			©<?= date('Y') ?>. Todos os direitos reservados.
 		</div>
 	</div>
 </footer>

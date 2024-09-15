@@ -1,5 +1,9 @@
 header {
 	background-color: var(--primary-color);
+	position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 100000;
 }
 
 header .menu {
@@ -128,7 +132,7 @@ header .menu-topo li a:hover::after {
 }
 
 .input.active {
-	width: 75%;
+	width: 77%;
 	right: 2px;
 }
 

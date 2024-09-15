@@ -1,11 +1,13 @@
 .banner-general-int {
 	padding: 50px 0;
 	background-color: #F4F0F8;
+	margin-bottom: 100px;
 }
 
 @media(max-width: 991px) {
 	.banner-general-int {
 		padding: 30px 0;
+		margin-bottom: 50px;
 	}
 }
 
@@ -47,4 +49,11 @@
 	.banner-general-int .description-category {
 		font-size: 18px;
 	}
+}
+
+.content-general {
+	font-size: 20px;
+	color: var(--text-color);
+	margin: 30px 0;
+	text-align: justify;
 }

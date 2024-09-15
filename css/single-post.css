@@ -80,8 +80,7 @@
 	object-fit: cover;
 }
 
-.single-post .content-post,
-.content-general {
+.single-post .content-post{
 	font-size: 20px;
 	color: var(--text-color);
 	margin: 30px 0;

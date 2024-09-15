@@ -6,7 +6,7 @@
             <?php
             // Consulta para os três últimos posts
             $latest_posts_query = new WP_Query(array(
-                'posts_per_page' => 3, // Três posts
+                'posts_per_page' => 3, 
                 'orderby'        => 'date',
                 'order'          => 'DESC',
             ));
@@ -31,7 +31,7 @@
         <?php
         // Resetando a query para renderizar os posts no carousel
         $latest_posts_query = new WP_Query(array(
-            'posts_per_page' => 3, // Três posts
+            'posts_per_page' => 3,
             'orderby'        => 'date',
             'order'          => 'DESC',
         ));
@@ -42,7 +42,7 @@
         ?>
                 <div class="carousel-item <?php echo $first_post ? 'active' : ''; ?>" style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full')); ?>');">
                     <section class="banner-general">
-                        <div class="banner-content">
+                        <div class="banner-content animate-on-scroll">
                             <div class="container">
                                 <p class="category-names"><?php the_category(', '); ?></p>
                                 <h1 class="banner-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>

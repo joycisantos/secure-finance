@@ -1,16 +1,13 @@
 <div class="posts-list">
     <?php
-    // Obtém o termo de pesquisa
     $search_query = get_search_query();
 
-    // Configura a query para buscar posts que correspondem ao termo de pesquisa
     $search_posts_query = new WP_Query(array(
-        's'              => $search_query, // Busca pelo termo de pesquisa
+        's'              => $search_query,
         'posts_per_page' => 3,
         'paged'          => get_query_var('paged') ? get_query_var('paged') : 1,
     ));
 
-    // Verifica se há posts correspondentes ao termo de busca
     if ($search_posts_query->have_posts()) :
         while ($search_posts_query->have_posts()) : $search_posts_query->the_post(); ?>
             <article>

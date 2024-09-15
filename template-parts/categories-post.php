@@ -1,6 +1,6 @@
 <section class="categories-post">
     <div class="container">
-        <h2 class="title-h2">Navegue por Categoria</h2>
+        <h2 class="title-h2 animate-on-scroll">Navegue por Categoria</h2>
 
         <div class="row">
             <?php
@@ -25,7 +25,7 @@
             ?>
 
                     <div class="col-lg-3">
-                        <div class="category-item">
+                        <div class="category-item animate-on-scroll">
                             <a href="<?php echo esc_url($category_link); ?>">
                                 <div class="category-icon">
                                     <img src="<?= esc_url($category_icon) ?>" alt="">

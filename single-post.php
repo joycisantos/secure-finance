@@ -2,7 +2,7 @@
 
 <?php get_template_part('template-parts/breadcrumb'); ?>
 
-<section class="single-post">
+<section class="single-post animate-on-scroll">
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
