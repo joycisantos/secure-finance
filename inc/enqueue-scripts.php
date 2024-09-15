@@ -15,24 +15,24 @@ function tema_enqueue_scripts()
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap', array(), null);
 
     // Script de pesquisa customizado com dependência do jQuery, carregado em todas as páginas
-    wp_enqueue_script(
-        'search',
-        get_template_directory_uri() . '/js/search.js',
-        array('jquery'), // Garantir que o jQuery é carregado
-        null,
-        true
-    );
+    // wp_enqueue_script(
+    //     'search',
+    //     get_template_directory_uri() . '/js/search.js',
+    //     array('jquery'), // Garantir que o jQuery é carregado
+    //     null,
+    //     true
+    // );
 
     // Script do menu mobile, carregado apenas em páginas relevantes (exemplo: se o menu está no header)
-    if (has_nav_menu('mobile')) {
-        wp_enqueue_script(
-            'menu-mobile',
-            get_template_directory_uri() . '/js/menu-mobile.js',
-            array('jquery'), 
-            null,
-            true
-        );
-    }
+    // if (has_nav_menu('mobile')) {
+    //     wp_enqueue_script(
+    //         'menu-mobile',
+    //         get_template_directory_uri() . '/js/menu-mobile.js',
+    //         array('jquery'), 
+    //         null,
+    //         true
+    //     );
+    // }
 
     // Script para esconder o preloader após o carregamento, inline
     wp_add_inline_script('jquery', '
