@@ -12,7 +12,7 @@
 				else :
 				?>
 					<a href="<?= site_url() ?>">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>img/logo-footer.png" alt="<?php bloginfo('name'); ?>" class="logo-footer">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-footer.png" alt="<?php bloginfo('name'); ?>" class="logo-footer">
 					</a>
 				<?php
 				endif;
