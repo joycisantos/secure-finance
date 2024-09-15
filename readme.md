@@ -1,0 +1,5 @@
+# Tema de Blog Voltado para Finanças
+
+Este projeto é um tema WordPress desenvolvido especialmente para blogs focados em finanças. O tema foi criado com o objetivo de oferecer uma experiência visual atraente e funcional, ajudando blogueiros e empresas do setor financeiro a compartilharem conteúdo relevante de forma clara e organizada. Ele permite a personalização completa do layout, incluindo a edição de logotipos, menus de navegação, e cores principais através da interface "Aparência -> Personalizar", facilitando a criação de uma identidade visual única.
+
+Além disso, o tema conta com a seção "Aparência -> Opções do Tema", onde os usuários podem facilmente cadastrar links para redes sociais e adicionar informações de contato, promovendo maior interação com os leitores e profissionais do setor. Com um design moderno, responsivo e focado em usabilidade, este tema é ideal para quem deseja compartilhar dicas de economia, investimentos e planejamento financeiro de maneira eficiente e acessível.
