@@ -31,6 +31,11 @@
 			</div>
 		</div>
 	</div>
+	<div class="copy">
+		<div class="container">
+			©<?= date('Y')?>. Todos os direitos reservados.
+		</div>
+	</div>
 </footer>
 </body>
 

@@ -1,0 +1,263 @@
+header {
+	background-color: var(--primary-color);
+}
+
+header .menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--primary-color);
+	padding: 15px 0;
+	position: relative;
+}
+
+header .logo-menu {
+	max-width: 190px;
+}
+
+@media(max-width: 1650px) {
+	header .logo-menu {
+		max-width: 150px;
+	}
+}
+
+header .menu-topo {
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 24px;
+	margin: 0;
+}
+
+header .menu-topo li {
+	list-style: none;
+}
+
+header .menu-topo li a {
+	display: inline-block;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 16px;
+	position: relative;
+	overflow: hidden;
+}
+
+header .menu-topo li a::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: var(--secondary-color);
+	transition: width 0.3s ease-in;
+}
+
+header .menu-topo li a:hover::after {
+	width: 100%;
+}
+
+.search-box {
+	right: 0;
+}
+
+.search-box .input {
+	position: absolute;
+	top: 20px;
+	right: 2px;
+	box-sizing: border-box;
+	width: 0px;
+	height: 57px;
+	padding: 0 20px;
+	outline: none;
+	font-size: 18px;
+	border-radius: 50px;
+	color: #29313a;
+	border: 3px solid #2E3040;
+	transition: all 0.8s ease;
+}
+
+::-webkit-input-placeholder {
+	color: #2E3040;
+}
+
+::-moz-placeholder {
+	color: #2E3040;
+}
+
+:-ms-input-placeholder {
+	color: #2E3040;
+}
+
+:-moz-placeholder {
+	color: #2E3040;
+}
+
+.btn-search {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background: #2E3040;
+	border-radius: 50%;
+	right: 0;
+	top: 19px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 80px;
+	font-size: 20px;
+	color: #fff;
+	transition: all 0.8s ease;
+}
+
+.btn-search span {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	position: relative;
+	z-index: 0;
+}
+
+.btn-search span svg {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	fill: #fff;
+}
+
+.input.active {
+	width: 75%;
+	right: 2px;
+}
+
+@media(max-width: 1600px) {
+	.input.active {
+		width: 79%;
+	}
+}
+
+.btn-search.animate {
+	transform: rotate(-360deg);
+}
+
+div.mobile-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-end;
+	background-color: var(--primary-color);
+	position: absolute;
+	float: right;
+	right: 0;
+}
+
+.menu-btn {
+	width: 30px;
+	height: 30px;
+	position: relative;
+	z-index: 999;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.menu-btn .bar {
+	width: 30px;
+	height: 4px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 4px;
+	transform: translate(-50%, -50%);
+	background-color: #FFFFFF;
+	transition: all 0.3s ease-in-out;
+}
+
+.menu-btn .bar:nth-of-type(2) {
+	top: calc(50% - 9px);
+}
+
+.menu-btn .bar:nth-of-type(3) {
+	top: calc(50% + 9px);
+}
+
+.menu-btn.active .bar:nth-of-type(1) {
+	display: none;
+}
+
+.menu-btn.active .bar:nth-of-type(2) {
+	top: 50%;
+	transform: translate(-50%, 0%) rotate(45deg);
+}
+
+.menu-btn.active .bar:nth-of-type(3) {
+	top: 50%;
+	transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	background: var(--primary-color);
+	transform: translateX(100%);
+	transition: transform 0.5s;
+	z-index: 99;
+	display: block;
+}
+
+.nav.active {
+	transform: translateX(0);
+	display: block;
+}
+
+.nav.active .menu-menu-container {
+	padding: 100px 0 10px 0;
+}
+
+.nav .nav__list_item {
+	list-style-type: none;
+}
+
+.menu-list-mobile {
+	padding: 0;
+	max-width: 500px;
+	margin: 30px auto;
+}
+
+.menu-list-mobile li {
+	list-style: none;
+}
+
+.menu-list-mobile li a {
+	display: inline-block;
+	text-decoration: none;
+	color: #FFFFFF;
+	padding: 10px 0;
+	width: 100%;
+	border-bottom: solid 1px var(--text-color);
+}
+
+.menu-list-mobile li:last-child a {
+	border-bottom: none;
+}
+
+#searchFormMobile {
+	display: flex;
+	gap: 15px;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+#searchFormMobile input {
+	width: 60%;
+	padding: 5px;
+}
+
+#searchFormMobile button {
+	width: 40%;
+	padding: 10px;
+}

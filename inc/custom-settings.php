@@ -339,3 +339,28 @@ function sanitize_theme_options($input)
     return $output;
 }
 
+function custom_theme_colors() {
+    // Recupera as cores personalizadas do Customizer
+    $primary_color = get_theme_mod('primary_color', '#232536');
+    $secondary_color = get_theme_mod('secondary_color', '#FFD050');
+    $tertiary_color = get_theme_mod('tertiary_color', '#592EA9');
+    $text_color = get_theme_mod('text_color', '#4C4C4C');
+    $second_text_color = get_theme_mod('second_text_color', '#6D6E76');
+
+    // Define o CSS dinâmico
+    $custom_css = "
+        :root {
+            --primary-color: " . esc_html($primary_color) . ";
+            --secondary-color: " . esc_html($secondary_color) . ";
+            --tertiary-color: " . esc_html($tertiary_color) . ";
+            --text-color: " . esc_html($text_color) . ";
+            --second-text-color: " . esc_html($second_text_color) . ";
+        }
+    ";
+
+    // Injeta o CSS no cabeçalho
+    wp_add_inline_style('wp-block-library', $custom_css);
+}
+add_action('wp_enqueue_scripts', 'custom_theme_colors');
+
+

@@ -1,0 +1,70 @@
+.categories-post {
+	margin-bottom: 150px;
+}
+
+@media(max-width: 991px) {
+	.categories-post {
+		margin-bottom: 50px;
+	}
+}
+
+.categories-post a {
+	display: inline-block;
+	text-decoration: none;
+	height: 100%;
+}
+
+.categories-post .category-item {
+	border: solid 1px var(--second-text-color);
+	height: 100%;
+	padding: 30px 20px;
+	border-radius: 5px;
+	transition: .3s ease-in;
+}
+
+@media(max-width: 991px) {
+	.categories-post .category-item {
+		height: auto;
+		margin: 15px 0;
+		text-align: center;
+	}
+}
+
+.categories-post .category-item:hover {
+	background-color: var(--secondary-color);
+	border-color: var(--secondary-color);
+	transition: .3s ease-in;
+}
+
+.categories-post .category-item .category-icon {
+	width: 80px;
+}
+
+@media(max-width: 991px) {
+	.categories-post .category-item .category-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.categories-post .category-item .category-icon img {
+		width: 70px;
+	}
+}
+
+.categories-post .category-item .category-title {
+	display: inline-block;
+	font-size: 20px;
+	color: var(--primary-color);
+	text-decoration: none;
+	margin: 5px 0;
+	font-weight: 700;
+	margin: 10px 0;
+}
+
+.categories-post .category-item .category-description p {
+	font-size: 16px;
+	color: var(--text-color);
+	font-weight: 500;
+}
